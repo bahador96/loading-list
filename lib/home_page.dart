@@ -14,27 +14,28 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.deepPurple[200],
         body: LiquidPullToRefresh(
-            onRefresh: _handleRefresh,
-            height: 300,
-            color: Colors.deepPurple,
-            backgroundColor: Colors.deepPurple[200],
-            showChildOpacityTransition: false,
-            animSpeedFactor: 2,
-            child: ListView.builder(
-              itemCount: 5,
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.all(25.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Container(
-                      height: 300,
-                      color: Colors.deepPurple,
-                    ),
+          onRefresh: _handleRefresh,
+          height: 300,
+          color: Colors.deepPurple,
+          backgroundColor: Colors.deepPurple[200],
+          showChildOpacityTransition: false,
+          animSpeedFactor: 2,
+          child: ListView.builder(
+            itemCount: 5,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.all(25.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    height: 300,
+                    color: Colors.deepPurple,
                   ),
-                );
-              },
-            )),
+                ),
+              );
+            },
+          ),
+        ),
       ),
     );
   }
